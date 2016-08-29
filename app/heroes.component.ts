@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Hero} from './hero';
-import { HeroService } from './hero.service';
+import {HeroService} from './hero.service';
 
 @Component({
   selector: 'my-heroes',
-  providers: [HeroService],
   template: `
    <h1>{{title}}</h1>
    <h2>My Heroes </h2>
