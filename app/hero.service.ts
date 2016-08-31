@@ -13,11 +13,15 @@ export class HeroService {
 			},750);
 		});
 		return prom;
-
-		//
-		// return new Promise<Hero[]>(resolve =>
-	    //   setTimeout(resolve, 2000)) // delay 2 seconds
-	    //   .then(() => this.getHeroes());
-	// 	return Promise.resolve(HEROES);
 	}
+
+	getHero(id:number) {
+		return this.getHeroes()
+			  .then(heroes =>
+				  heroes.find(hero =>  // TODO: How does this work and why can't I put in curly braces?
+					  hero.id === id
+				  )
+			  );
+	}
+
 }
